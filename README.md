@@ -232,3 +232,201 @@ Después esos 5 caracteres se comparan con el Head que es el último commit real
      git annotate indice.txt
 
 ![](https://github.com/ItzaBesanilla/Libro-git/blob/a03c1e25f6e77ab13c96bc01d1524c7a159280f3/Ejercicios/2-%20Historial%20de%20cambios/16-%20Se%20muestra%20quien%20hizo%20cambios.png)
+
+## - DESHACER CAMBIOS.
+
+**Ejercicio 1.**
+
+1. Eliminar la última línea del fichero indice.txt y guardarlo.
+
+
+     vi indice.txt
+    
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/1-Eliminar%20ultima%20linea%20del%20fichero.png)
+
+
+2. Comprobar el estado del repositorio.
+
+
+   git status
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/2-Comprobar%20estado%20del%20repositorio.png)
+
+
+3. Deshacer los cambios realizados en el fichero indice.txt para volver a la versión anterior del fichero.
+
+
+    git checkout --indice.txt
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/3-Deshacer%20cambios%20y%20volver%20a%20version%20anterior.png)
+
+4. Volver a comprobar el estado del repositorio.
+
+
+    git status
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/4-Comprobar%20estado%20del%20repositorio.png)
+
+**Ejercicio 2.**
+
+1. Eliminar la última línea del fichero indice.txt y guardarlo.
+
+
+    nano indice.txt
+
+2. Añadir los cambios a la zona de intercambio temporal (staging area).
+
+
+    git add .
+
+3. Comprobar de nuevo el estado(status) del repositorio.
+
+
+    git status
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/7-Comprobar%20cambios.png)
+
+4. Quitar los cambios de la zona de intercambio temporal, pero mantenerlos en el directorio de trabajo.
+
+
+    git reset indice.txt
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/8-Quitar%20cambios%20y%20mantenerlos%20en%20el%20directorio%20de%20trabajo.png)
+
+5. Comprobar de nuevo el estado del repositorio.
+
+
+    git status
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/9-Comprobar%20estado.png)
+
+6. Deshacer los cambios realizados en el fichero indice.txt para volver a la versión anterior del fichero.
+
+
+    git checkout --indice.txt
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/10-%20Deshacer%20cambios%20en%20fichero%20y%20volver%20a%20la%20version%20anterior.png)
+
+7. Volver a comprobar el estado del repositorio.
+
+   
+	git status
+
+**Ejercicio 3.**
+
+1. Eliminar la última línea del fichero indice.txt y guardarlo.
+
+
+    nano indice.txt
+
+2. Eliminar el fichero capitulos/capitulo3.txt.
+
+
+    rm capitulos/capitulo3.txt
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/12-Eliminar%20fichero%20capitulos-capitulo3.png)
+
+
+3. Añadir un fichero nuevo captitulos/capitulo4.txt vacío.
+
+
+    touch capitulos/capitulo4.txt
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/13-A%C3%B1adir%20fichero%20nuevo.png)
+
+4. Añadir los cambios a la zona de intercambio temporal.
+
+
+    git add .
+
+5. Comprobar de nuevo el estado del repositorio.
+
+
+    git status
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/15-Verificar%20estado.png)
+
+6. Quitar los cambios de la zona de intercambio temporal, pero mantenerlos en el directorio de trabajo.
+
+
+    git reset
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/16-Quitar%20cambios%20de%20la%20zona%20pero%20mantenerlos%20en%20el%20directorio.png)
+
+7. Comprobar de nuevo el estado del repositorio.
+
+
+    git status
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/17-Comprobar%20estado.png)
+
+8. Deshacer los cambios realizados para volver a la versión del repositorio.
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/18-Deshacer%20cambios%20para%20volver%20a%20la%20version%20anterior.png)
+
+9. Volver a comprobar el estado del repositorio.
+
+    
+	git status
+
+**Ejercicio 4.**
+
+1. Eliminar la última línea del fichero indice.txt y guardarlo.
+
+  
+      nano indice.txt
+
+2. Eliminar el fichero capitulos/capitulo3.txt.
+
+
+    rm capitulos/capitulo3.txt
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/20-Eliminar%20fichero.png)
+
+3. Añadir los cambios a la zona de intercambio temporal y hacer un commit con el mensaje “Borrado accidental.”
+
+
+    git add . 
+	git commit -m "Borrado accidental"
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/21-A%C3%B1adir%20cambios%20y%20hacer%20commit.png)
+
+4. Comprobar el historial del repositorio.
+
+
+    git log 
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/22-Comprobar%20historial%20del%20repositorio.png)
+
+
+5. Deshacer el último commit pero mantener los cambios anteriores en el directorio de trabajo y la zona de intercambio temporal.
+
+
+    git reset --soft HEAD~1
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/23-Deshacer%20ultimo%20commit%20y%20mantener%20los%20anteriores.png)
+
+6. Comprobar el historial y el estado del repositorio.
+
+    git status
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/24-Comprobar%20historial.png)
+
+7. Volver a hacer el commit con el mismo mensaje de antes.
+
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/25-Volver%20a%20hacer%20commit.png)
+
+
+8. Deshacer el último commit y los cambios anteriores del directorio de trabajo volviendo a la versión anterior del repositorio.
+
+
+    git reset --hard HEAD~1
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/26-Deshacer%20ultimo%20commit%20y%20cambios%20anteriores.png)
+
+
+9. Comprobar de nuevo el historial y el estado del repositorio.
+
+![](https://github.com/ItzaBesanilla/Libro-git/blob/9ce13915fcb78b12523ae39279efb574fa5c65d6/Ejercicios/3-%20Deshacer%20cambios/27-Comprobar%20de%20nuevo%20estado.png)
